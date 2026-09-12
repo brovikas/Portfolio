@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs";
 import { profile } from "@/data/content";
+import ToriiSilhouette from "./ToriiSilhouette";
 
 function ParticleField() {
   const canvasRef = useRef(null);
@@ -103,7 +104,8 @@ export default function Hero() {
 
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
-      <ParticleField />
+      <ToriiSilhouette className="absolute bottom-0 left-0 w-full h-[55%] opacity-80" />
+    <ParticleField />
       <div className="relative z-10 mx-auto max-w-6xl px-6 w-full">
         <p className="hero-sub font-mono text-xs tracking-wider2 text-crimson-bright mb-6 opacity-0">
           {profile.role}
@@ -131,9 +133,23 @@ export default function Hero() {
           <a href="#projects" className="poly-btn" data-cursor-lock>
             <span>View Missions</span>
           </a>
-          <a href={profile.resumeUrl} className="poly-btn" data-cursor-lock download>
-            <span>Download Resume</span>
-          </a>
+          <a
+            href={profile.resumeUrl}
+            className="poly-btn"
+            data-cursor-lock
+            download
+            onClick={async (e) => {
+            try {
+            const res = await fetch(profile.resumeUrl, { method: "HEAD" });
+            if (!res.ok) throw new Error("missing");
+            } catch {
+            e.preventDefault();
+            alert("Resume isn't uploaded yet — add resume.pdf to the /public folder.");
+        }
+  }}
+>
+  <span>Download Resume</span>
+</a>
         </div>
       </div>
     </section>

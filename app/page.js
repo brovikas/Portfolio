@@ -14,6 +14,7 @@ import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import CLITerminal from "@/components/CLITerminal";
 import CommandPalette from "@/components/CommandPalette";
+import CodeOfBlade from "@/components/CodeOfBlade";
 
 const EASTER_EGG_WORD = "ninja";
 
@@ -80,6 +81,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <CodeOfBlade />
         <Skills />
         <Projects />
         <Experience />
