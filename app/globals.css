@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cursor-x: 50%;
+  --cursor-y: 50%;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a1272e #0a0a0a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: none;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(ellipse at top, rgba(161, 39, 46, 0.06), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, transparent 1px, transparent 2px);
+}
+
+@media (hover: none), (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+  .custom-cursor {
+    display: none;
+  }
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #b8933f;
+  outline-offset: 3px;
+}
+
+/* Custom cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+.custom-cursor svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Section heading treatment */
+.dojo-heading {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+/* Hairline divider styled as a blade edge */
+.blade-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #a1272e 20%, #b8933f 50%, #a1272e 80%, transparent);
+  opacity: 0.5;
+}
+
+/* Polymorphic button base */
+.poly-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.1rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: #e8e6df;
+  background: #131313;
+  border: 1px solid rgba(184, 147, 63, 0.35);
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition: color 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.poly-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #a1272e;
+  transform: translateX(-101%);
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 0;
+}
+
+.poly-btn:hover::before,
+.poly-btn:focus-visible::before {
+  transform: translateX(0);
+}
+
+.poly-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.poly-btn:hover,
+.poly-btn:focus-visible {
+  border-color: #a1272e;
+}
+
+/* Terminal caret blink */
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.terminal-caret {
+  animation: caret-blink 1s step-end infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
