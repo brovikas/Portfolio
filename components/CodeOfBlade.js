@@ -4,7 +4,7 @@ const PRINCIPLES = [
   { title: "Move with precision", body: "Every feature earns its place. No dead code, no bloated dependencies — ship what the product actually needs." },
   { title: "Read the terrain first", body: "Understand the data flow and edge cases before writing a line. Debugging blind is how projects die." },
   { title: "Leave no trace of friction", body: "Fast load times, clean UX, sensible error states. The user should never feel the machinery underneath." },
-  { title: "Train daily", body: "100+ DSA problems solved isn't a finish line — it's upkeep. The craft dulls if you stop sharpening it." },
+  { title: "Train daily", body: "200+ DSA problems solved isn't a finish line — it's upkeep. The craft dulls if you stop sharpening it." },
 ];
 
 export default function CodeOfBlade() {

@@ -1,7 +1,7 @@
 
 export const profile = {
   name: "Vikas Sharma",
-  alias: "brovikas",
+  alias: "Brovikas",
   role: "Full-Stack MERN Developer",
   tagline: "I build fast, real-time web apps and disappear before the bugs show up.",
   location: "Jammu, J&K, India",
@@ -13,29 +13,39 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "Final-year BCA student at Maulana Azad Memorial College, Jammu, with a strong foundation in computer science and a hands-on approach to building software that goes beyond conventional academic projects.",
+    "A Final-year BCA student at Maulana Azad Memorial College, Jammu, with a strong foundation in computer science and a hands-on approach to building software that.",
 
     "Full-stack engineer working across modern web architectures, AI-powered applications, real-time systems, and developer tooling—turning complex technical requirements into reliable, scalable products.",
 
     "Experienced with backend architecture, APIs, databases, authentication, real-time communication, AI/LLM integrations, containerized environments, Linux, Git, CI/CD, and production-oriented development workflows.",
-
-    "I think beyond simply making software work—focusing on architecture, performance, security, observability, failure handling, and maintainability to build systems that are engineered to scale rather than merely built to run."
   ],
 };
 
 export const skills = [
   { name: "JavaScript", category: "Language" },
+  { name: "C++", category: "Language" },
+  { name: "Python", category: "Language" },
   { name: "TypeScript", category: "Language" },
   { name: "React", category: "Frontend" },
   { name: "Next.js", category: "Frontend" },
   { name: "Tailwind CSS", category: "Frontend" },
   { name: "Node.js", category: "Backend" },
   { name: "Express", category: "Backend" },
+  { name: "REST APIs", category: "Backend" },
   { name: "MongoDB", category: "Database" },
-  { name: "Socket.io", category: "Realtime" },
-  { name: "AWS", category: "Cloud" },
-  { name: "Postman", category: "Tooling" },
+  { name: "MySQL", category: "Database" },
+  { name: "PostgreSQL", category: "Database" },
+//  { name: "Socket.io", category: "Realtime" },
+  { name: "IP/MAC", category: "Networking" },
+  { name: "OSI/TCP/UDP", category: "Networking" },
+  { name: "ARP/DHCP/SubNet", category: "Networking" },
+  { name: "AWS", category: "DevOps" },
+  { name: "Linux", category: "DevOps" },
+  { name: "Docker", category: "DevOps" },
+  { name: "Nginx", category: "DevOps" },
   { name: "Git / GitHub", category: "Tooling" },
+  { name: "Postman", category: "Tooling" },
+  { name: "VS Code", category: "Tooling" },
 ];
 
 
