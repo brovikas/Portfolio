@@ -112,7 +112,7 @@ export default function Hero() {
         </p>
         <h1
           ref={nameRef}
-          className="dojo-heading text-[13vw] sm:text-6xl md:text-8xl leading-[0.95] text-blade mb-8"
+          className="dojo-heading text-[12vw] sm:text-6xl md:text-8xl leading-[0.95] text-blade mb-8"
         >
           {profile.name.split("").map((char, i) => (
             <span
