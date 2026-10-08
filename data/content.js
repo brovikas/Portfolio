@@ -54,22 +54,29 @@ export const projects = [
     codename: "CollabBoard",
     objective: "Real-time collaborative whiteboard for teams to sketch and plan together live.",
     stack: ["React", "Node.js", "Socket.io", "MongoDB"],
-    liveUrl: "https://collab-board-six-chi.vercel.app", 
+    liveUrl: "https://collaboardvex.vercel.app", 
     repoUrl: "https://github.com/brovikas/collabboard",
   },
   {
     codename: "Retroleaf",
     objective: "Digital journal with JWT authentication and daily mood tracking.",
     stack: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    liveUrl: "https://retro-leaf.vercel.app", 
+    liveUrl: "https://retroleafvex.vercel.app", 
     repoUrl: "https://github.com/brovikas/retroleaf", 
   },
   {
     codename: "CodeSync",
     objective: "Collaborative code editor with Monaco Editor and multi-language execution.",
     stack: ["React", "Node.js", "Socket.io", "Monaco Editor"],
-    liveUrl: "https://real-time-collaborative-editor-seven.vercel.app/", // TODO
+    liveUrl: "https://codesyncvex.vercel.app", // TODO
     repoUrl: "https://github.com/brovikas/codesync", 
+  },
+  {
+    codename: "Vexifyy",
+    objective: "A fast, scalable URL shortening service built with React,Serverless function and MongoDB",
+    stack: ["React", "Node.js", "Tailwind", "Vercel SF"],
+    liveUrl: "https://vexifyy.vercel.app", // TODO
+    repoUrl: "https://github.com/brovikas/Vexifyy-URL-Shortner", 
   },
 ];
 
