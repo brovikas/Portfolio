@@ -25,16 +25,17 @@ export const skills = [
   { name: "JavaScript", category: "Language" },
   { name: "C++", category: "Language" },
   { name: "Python", category: "Language" },
+  { name: "SQL", category: "Language" },
   { name: "TypeScript", category: "Language" },
   { name: "React", category: "Frontend" },
   { name: "Next.js", category: "Frontend" },
   { name: "Tailwind CSS", category: "Frontend" },
   { name: "Node.js", category: "Backend" },
   { name: "Express", category: "Backend" },
-  { name: "REST APIs", category: "Backend" },
+  { name: "FastAPI", category: "Backend" },
   { name: "MongoDB", category: "Database" },
   { name: "MySQL", category: "Database" },
-  { name: "PostgreSQL", category: "Database" },
+//  { name: "PostgreSQL", category: "Database" },
 //  { name: "Socket.io", category: "Realtime" },
   { name: "IP/MAC", category: "Networking" },
   { name: "OSI/TCP/UDP", category: "Networking" },
@@ -50,6 +51,13 @@ export const skills = [
 
 
 export const projects = [
+  {
+  codename: "PacketLens",
+  objective: "A high-performance, multi-threaded Deep Packet Inspection engine for real-time network traffic analysis and filtering.",
+  stack: ["C++", "Multi-threading", "TCP/IP", "TLS/HTTPS", "PCAP Parsing"],
+  liveUrl: "https://github.com/brovikas/PacketLens",
+  repoUrl: "https://github.com/brovikas/PacketLens",
+  },
   {
     codename: "CollabBoard",
     objective: "Real-time collaborative whiteboard for teams to sketch and plan together live.",
@@ -68,15 +76,8 @@ export const projects = [
     codename: "CodeSync",
     objective: "Collaborative code editor with Monaco Editor and multi-language execution.",
     stack: ["React", "Node.js", "Socket.io", "Monaco Editor"],
-    liveUrl: "https://codesyncvex.vercel.app", // TODO
+    liveUrl: "https://codesyncvex.vercel.app", 
     repoUrl: "https://github.com/brovikas/codesync", 
-  },
-  {
-    codename: "Vexifyy",
-    objective: "A fast, scalable URL shortening service built with React,Serverless function and MongoDB",
-    stack: ["React", "Node.js", "Tailwind", "Vercel SF"],
-    liveUrl: "https://vexifyy.vercel.app", // TODO
-    repoUrl: "https://github.com/brovikas/Vexifyy-URL-Shortner", 
   },
 ];
 
@@ -90,7 +91,7 @@ export const experience = [
   },
   {
     title: "BCA — Computer Applications",
-    org: "Maulana Azad Memorial College, Jammu",
+    org: "Cluster University of Jammu",
     period: "August 2024 — August 2027",
     rank: "White Belt",
     description: "Third-year student, building the foundation while shipping side projects in parallel.",
